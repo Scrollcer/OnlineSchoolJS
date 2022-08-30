@@ -2,7 +2,7 @@
 * count if user was born in leap year or not.  */
 
 const CURRENTYEAR = 2022
-const name = "Denis", surname = "Lazarev", day = Number(19), month = Number(7), year = Number(2000)
+const name = "Sergei", surname = "Lazarev", day = Number(19), month = Number(7), year = Number(1998)
 const age = CURRENTYEAR - year
 let leapyear = false
 let symbol
