@@ -4,6 +4,7 @@
 //compass[compass.west.right] // -> {left: 'west', right: 'east'}
 //compass[compass.north.left] // -> {left: 'south', right: 'north'}
 
+
 const compass = {
     north: {left: "west", right: "east"},
     east: {left: "north", right: "south"},
