@@ -2,7 +2,7 @@
 * count if user was born in leap year or not.  */
 
 const CURRENTYEAR = 2022
-const name = "Sergei", surname = "Lazarev", day = Number(19), month = Number(7), year = Number(1998)
+const name = "Sergei", surname = "Lazarev", userday = Number(19), usermonth = Number(7), year = Number(1998)
 const age = CURRENTYEAR - year
 let leapyear = false
 let symbol
@@ -14,40 +14,40 @@ else if (year % 100 === 0 && year % 4 === 0){
     leapyear = true
 }
 
-if ((month === 1  && day > 19) || (month === 2  && day < 19) ){
+if ((usermonth === 1  && userday > 19) || (usermonth === 2  && userday < 19) ){
     symbol = "Aquarius ♒"
 }
-else if ((month === 2  && day > 18) || (month === 3  && day < 21) ){
+else if ((usermonth === 2  && userday > 18) || (usermonth === 3  && userday < 21) ){
     symbol = "Pisces ♓"
 }
-else if ((month === 3  && day > 20) || (month === 4  && day < 20) ){
+else if ((usermonth === 3  && userday > 20) || (usermonth === 4  && userday < 20) ){
     symbol = "Aries ♈"
 }
-else if ((month === 4  && day > 19) || (month === 5  && day < 21) ){
+else if ((usermonth === 4  && userday > 19) || (usermonth === 5  && userday < 21) ){
     symbol = "Taurus ♉"
 }
-else if ((month === 5  && day > 20) || (month === 6  && day < 21) ){
+else if ((usermonth === 5  && userday > 20) || (usermonth === 6  && userday < 21) ){
     symbol = "Gemini ♊"
 }
-else if ((month === 6  && day > 20) || (month === 7  && day < 23) ){
+else if ((usermonth === 6  && userday > 20) || (usermonth === 7  && userday < 23) ){
     symbol = "Cancer ♋"
 }
-else if ((month === 7  && day > 22) || (month === 8  && day < 23) ){
+else if ((usermonth === 7  && userday > 22) || (usermonth === 8  && userday < 23) ){
     symbol = "Leo ♊"
 }
-else if ((month === 8  && day > 22) || (month === 9  && day < 23) ){
+else if ((usermonth === 8  && userday > 22) || (usermonth === 9  && userday < 23) ){
     symbol = "Virgo ♍"
 }
-else if ((month === 9  && day > 22) || (month === 10  && day < 23) ){
+else if ((usermonth === 9  && userday > 22) || (usermonth === 10  && userday < 23) ){
     symbol = "Libra ♎"
 }
-else if ((month === 10  && day > 22) || (month === 11  && day < 22) ){
+else if ((usermonth === 10  && userday > 22) || (usermonth === 11  && userday < 22) ){
     symbol = "Scorpio ♏"
 }
-else if ((month === 11  && day > 21) || (month === 12  && day < 22) ){
+else if ((usermonth === 11  && userday > 21) || (usermonth === 12  && userday < 22) ){
     symbol = "Sagittarius ♐"
 }
-else if ((month === 12  && day > 21) || (month === 1  && day < 20) ){
+else if ((usermonth === 12  && userday > 21) || (usermonth === 1  && userday < 20) ){
     symbol = "Capricorn ♑"
 }
 
