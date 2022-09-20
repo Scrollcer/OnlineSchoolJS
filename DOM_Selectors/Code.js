@@ -53,4 +53,44 @@ const year = STDIN.getNumberFromUser("Please, enter your year of birth", (a) => 
     return isNaN(a) || a < 1900 || a > 2022
 })
 
-const age = 2022 - year
+const map = new Map()
+
+function findAllElements(node) {
+    if (node == null) {
+        return
+    }
+
+    if (node.innerText === 'User: firstName lastName - age years old;') {
+        node.innerText = `User: ${firstName} ${lastName} - ${2022 - year} years old;`
+    }
+
+    if (node.tagName !== undefined) {
+        if (map.has(node.tagName)) {
+            let a = Number(map.get(node.tagName))
+            map.set(node.tagName, ++a)
+        } else {
+            map.set(node.tagName, 1)
+        }
+    }
+
+    findAllElements(node.firstElementChild)
+    findAllElements(node.nextElementSibling)
+}
+
+findAllElements(document)
+
+if (map.has('LI')) {
+    let a = Number(map.get('LI'))
+    a += map.size + 1
+    map.set('LI', a)
+} else {
+    map.set('LI', map.size + 1)
+}
+
+const elem = document.getElementsByClassName("tag-list")
+
+for (let element of map) {
+    elem[0].innerHTML += `<li>${element[0]} : ${element[1]}</li>`
+}
+
+
